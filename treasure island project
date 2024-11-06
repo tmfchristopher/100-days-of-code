@@ -1,0 +1,42 @@
+print(r'''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+direction_one = input("you're at a cross road. Where do you want to go?\n       Type left or right. ").lower()
+if direction_one == 'left':
+    direction_two = input("You've come upon a river. Do you want to 'swim across' or 'find a bridge'? ").lower()
+    if direction_two == 'find a bridge':
+        final_choice = input('''You've made it safely across. There are three treasure chests. 
+        You may choose only one. Which do you choose: left, right, or center? ''').lower()
+        if final_choice == 'left':
+            print("You are eaten by a mimic. Game over.")
+        elif final_choice == 'right':
+            print("The chest is empty, someone got here before you did. Game over.")
+        elif final_choice == 'center':
+            print("Congratulations! You found the treasure!")
+        else:
+            print("Seriously, you're not going to choose after all this. Game over.")
+    else:
+        print("You are swept away by the current and drowned. Game over.")
+else:
+    print("The ground gives way beneath you. Game over.")
