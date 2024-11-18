@@ -1,0 +1,69 @@
+Rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+Paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+Scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#imports
+import random
+
+#user name
+name=input("What is your name?")
+
+print("Hello,", name, "lets play Rock, Paper, Scissors")
+
+#computer choice
+cChoice=random.choice("RPS")
+
+#user choice
+uChoice=input("Enter R for Rock, P for Paper, or S for Scissors: \n").upper().strip()
+
+#secret code
+#if name =="Toni":
+    #if uChoice == "R":
+        #cChoice = "S"
+    #elif uChoice == "P":
+        #cChoice = "R"
+    #elif uChoice == "S":
+        #cChoice = "P"
+
+#Compare choices
+if cChoice == uChoice:
+    print("Draw!")
+elif uChoice == "R" and cChoice == "P":
+    print(f"{Paper} beats {Rock}, you lose.")
+elif uChoice == "P" and cChoice == "R":
+    print(f"{Paper} beats {Rock}, you win.")
+elif uChoice == "R" and cChoice == "S":
+    print(f"{Rock} beats {Scissors}, you win.")
+elif uChoice == "S" and cChoice == "R":
+    print(f"{Rock} beats {Scissors}, you lose.")
+elif uChoice == "S" and cChoice == "P":
+    print(f"{Scissors} beats {Paper}, you win.")
+elif uChoice == "P" and cChoice == "S":
+    print(f"{Scissors} beats {Paper}, you lose.")
+elif uChoice == cChoice:
+    print("It's a draw!")
+else:
+    print("Not good at following instructions, huh?")
